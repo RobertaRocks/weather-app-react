@@ -30,10 +30,12 @@ export default function SearchEngine() {
   }
 
   let form = (
-    <form onSubmit={getTemp}>
-      <input type="search" placeholder="Enter a City" onChange={getCity} />
-      <button type="submit">Search</button>
+
+    <form onSubmit={getTemp} className="form-inline input-group">
+      <input type="search" className="form-control mr-sm-2" placeholder="Enter a City" aria-label="Recipient's username" aria-describedby="button-addon2" onChange={getCity} />
+      <button type="submit" className="btn btn-outline-secondary my-2 my-sm-0"> Search</button>
     </form>
+
   );
 
   if (loaded) {

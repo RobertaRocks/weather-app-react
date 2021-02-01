@@ -1,4 +1,23 @@
-.App {
+.App  {
+  margin: 20px;
   text-align: center;
-  font-family: sans-serif;
+  font-family: monospace;
 }
+
+ul li {
+margin-top: 20px;
+list-style: none;
+font-size: 20px;
+}
+
+a {
+color: blueviolet;
+text-decoration: none;
+}
+
+form {
+padding-left: 150px;
+padding-right:150px;}
+
+small {
+margin-top: 55px;}
