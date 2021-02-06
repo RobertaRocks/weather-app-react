@@ -25,15 +25,15 @@ export default function SearchEngine() {
       hum: response.data.main.humidity,
       descr: response.data.weather[0].main,
       wind: response.data.wind.speed,
-      icon: `https://openweathermap.org/img/w/${response.data.weather[0].icon}.png`
+      country: response.data.sys.country,
     });
   }
 
   let form = (
 
     <form onSubmit={getTemp} className="form-inline input-group">
-      <input type="search" className="form-control mr-sm-2" placeholder="Enter a City" aria-label="Recipient's username" aria-describedby="button-addon2" onChange={getCity} />
-      <button type="submit" className="btn btn-outline-secondary my-2 my-sm-0"> Search</button>
+      <input type="search" className="form-control in-line mr-sm" placeholder="Enter a City" aria-label="Recipient's username" aria-describedby="button-addon2" onChange={getCity} />
+      <button type="submit" className="btn btn-outline-secondary my-sm-0 searchbtn" > Search</button>
     </form>
 
   );
@@ -42,19 +42,41 @@ export default function SearchEngine() {
     return (
       <div>
         {form}
-        <ul>
-          <li>
-            {" "}
-            In {city}: {Math.round(weather.temp)}°C{" "}
-          </li>
+        
+          <h2>{city}, {weather.country}</h2>
+          <h3>{weather.descr}</h3>
+
+          <div className="row">
+            
+              <img className="weather-icon col-3" src={`/img/${weather.descr}.gif`} alt="img" />{" "}
+
+              <div className="results col-4">
+
+              <div className="degree">{Math.round(weather.temp)}{" "} 
+
+              
+
+              <a hfref="#" className="celsius-far active">°C </a> 
+
+              <span className="small">|</span>   
+
+              <a hfref="#" className="celsius-far far">°F </a>
+              
+            
+              
+              </div>
+
+
+
+</div>
+          </div>
+
+        <ul className="results">
           <li> Humidity: {weather.hum}% </li>
-          <li> Sky: {weather.descr}</li>
           <li> Wind: {weather.wind} km/h</li>
-          <li>
-            {" "}
-            <img src={weather.icon} alt="img" />{" "}
-          </li>
+          <li> Updated: 06 February,  10:34 </li>   
         </ul>
+
       </div>
     );
   } else {return form}
