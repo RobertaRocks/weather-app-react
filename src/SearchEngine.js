@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
+import WeatherTemperature from "./WeatherTemperature";
 import axios from "axios";
+
 
 export default function SearchEngine() {
   const [city, setCity] = useState("");
@@ -26,14 +29,20 @@ export default function SearchEngine() {
       descr: response.data.weather[0].main,
       wind: response.data.wind.speed,
       country: response.data.sys.country,
-    });
-  }
+      currentDate: 
+                  new Date(response.data.dt * 1000).getHours() 
+                  + ':' + 
+                  new Date(response.data.dt * 1000).getMinutes() 
 
+  
+  })};
+
+ 
   let form = (
 
     <form onSubmit={getTemp} className="form-inline input-group">
       <input type="search" className="form-control in-line mr-sm" placeholder="Enter a City" aria-label="Recipient's username" aria-describedby="button-addon2" onChange={getCity} />
-      <button type="submit" className="btn btn-outline-secondary my-sm-0 searchbtn" > Search</button>
+      <button type="submit" className="btn btn-outline-secondary my-sm-0 searchbtn"> Search</button>
     </form>
 
   );
@@ -48,33 +57,16 @@ export default function SearchEngine() {
 
           <div className="row">
             
-              <img className="weather-icon col-3" src={`/img/${weather.descr}.gif`} alt="img" />{" "}
-
-              <div className="results col-4">
-
-              <div className="degree">{Math.round(weather.temp)}{" "} 
-
-              
-
-              <a hfref="#" className="celsius-far active">°C </a> 
-
-              <span className="small">|</span>   
-
-              <a hfref="#" className="celsius-far far">°F </a>
-              
-            
-              
-              </div>
-
-
-
-</div>
-          </div>
+              <img className="weather-icon col-7" src={`/img/${weather.descr}.gif`} alt="img" />{" "}
+                <WeatherTemperature celsius={weather.temp}/>
+             
+         
+           </div>
 
         <ul className="results">
           <li> Humidity: {weather.hum}% </li>
           <li> Wind: {weather.wind} km/h</li>
-          <li> Updated: 06 February,  10:34 </li>   
+        <li> {weather.currentDate} </li>   
         </ul>
 
       </div>
