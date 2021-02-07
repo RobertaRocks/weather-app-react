@@ -1,16 +1,32 @@
 import React from "react";
-import axios from "axios";
 
 export default function FormattedDate(props) {
-let day = props.currentDate.getDay();
-let month = props.currentDate.getMonth() ;
-let year =  props.currentDate.getFullYear() ;
-let hours = props.currentDate.getHours() ;
-let minutes = props.currentDate.getMinutes() ;
-let seconds = props.currentDate.getSeconds();
+let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  let day = days[props.currentDate.getDay()];
+  let fulldate= [props.currentDate.getDate()];
+  let months = [ "January", "February", "March", "April","May","June", "July", "August", "September","October","November", "December"];
+  let month = months[props.currentDate.getMonth()];
+
+  let hours = props.currentDate.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  
+  let minutes = props.currentDate.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
   return (
     <div>
-      {day}-{month}-{year} {hours}:{minutes}:{seconds}
+      {day} {fulldate} {month} {hours}:{minutes}
     </div>
   );
 

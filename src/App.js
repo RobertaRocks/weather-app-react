@@ -10,7 +10,7 @@ export default function App() {
       <h1>React Weather App</h1>
       <SearchEngine/>
     </div>
-      <small>Open sourced by <a href="https://www.linkedin.com/in/robertafrancesconi/" target="_blank"> Roberta Francesconi</a> on <a href="https://github.com/RobertaRocks/weather-app-react" target="_blank" rel="noreferrer">GitHub</a></small>
+      <small>Open sourced by <a href="https://www.linkedin.com/in/robertafrancesconi/" target="_blank" rel="noreferrer"> Roberta Francesconi</a> on <a href="https://github.com/RobertaRocks/weather-app-react" target="_blank" rel="noreferrer">GitHub</a></small>
        
 
 </div>

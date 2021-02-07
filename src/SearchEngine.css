@@ -1,19 +1,24 @@
 .form-inline {
-margin-bottom: 20px;}
-
-.searchbtn {
-background-color: #ebd4d4;
-border-color:#ebd4d4;;
- box-shadow: 5px 10px #888888;
+margin-bottom: 20px;
 }
 
-.searchbtn:focus, .searchbtn:active, .searchbtn:active:focus {
- box-shadow: 5px 10px #888888;
+
+.searchbtn {
+margin-left:10px;
+background-color: #ebd4d4;
+border-color:#ebd4d4;;
+box-shadow: 5px 8px #888888;
+border-top-right-radius:30px;
+border-bottom-right-radius:30px;
+}
+
+.searchbtn:focus,  .searchbtn:hover, .searchbtn:active:focus {
+ box-shadow: 5px 8px #888888;
 }
 
 .form-control {
- box-shadow: 5px 10px #888888;
-
+box-shadow: 5px 8px #888888;
+border-radius: 30px;
 
 }
 .form-control:focus {

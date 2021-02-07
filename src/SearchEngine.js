@@ -23,7 +23,6 @@ export default function SearchEngine() {
   }
 
   function showTemp(response) {
-    setLoaded (true);
     setWeather({
       temp: Math.round(response.data.main.temp),
       hum: response.data.main.humidity,
@@ -31,13 +30,12 @@ export default function SearchEngine() {
       wind: response.data.wind.speed,
       country: response.data.sys.country,
       city: response.data.name,
-      currentDate: 
-                  new Date(response.data.dt * 1000).getHours() 
-                  + ':' + 
-                  new Date(response.data.dt * 1000).getMinutes() 
+      currentDate: new Date(response.data.dt * 1000), 
 
   
-  })};
+  })
+setLoaded (true);
+};
 
  
   let form = (
@@ -68,7 +66,7 @@ export default function SearchEngine() {
         <ul className="results">
           <li> Humidity: {weather.hum}% </li>
           <li> Wind: {weather.wind} km/h</li>
-        <li> {weather.currentDate} </li>   
+        <li> <FormattedDate currentDate={weather.currentDate}/> </li>   
         </ul>
         <Forecast city={city} descr={weather.descr}/>
       </div>
