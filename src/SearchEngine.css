@@ -51,29 +51,37 @@ font-size: 60px;
 text-align: left;
 }
 
-.celsius-far, .small {
-font-family: monospace;
+.celsius-far-far, .celsius-far-cel, .small {
 font-size: 15px;
 top: -25px;
 position: relative;
 }
 
-.far {
-margin-left: 7px;
+.celsius-far-far {
+margin-left:3px;
 cursor: pointer;
 }
 
-.cel {
+.far {
+margin-left:12px;
+}
+
+.celsius-far-cel{
 margin-left:-25px;
 cursor: pointer;
 }
 
-.col-6 a:link {
-color: #835858;
-text-decoration: underline;
+.celsius-far-cel a, .celsius-far-far a, .link a {
+color:#d9adad;
+cursor: none;
 }
 
-.col-6 a:hover {
+.celsius-far-cel a:link, .celsius-far-far a:link, .link a:link {
+color: #835858;
+text-decoration: line-through;
+}
+
+.celsius-far-cel a:hover, .celsius-far-far a:hover, .link a:hover{
   color: #d9adad;
   cursor: pointer;
   text-decoration: line-through;

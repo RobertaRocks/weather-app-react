@@ -25,9 +25,9 @@ if (unit==="celsius") {
 return (
  <div className="results col-6">
               <div className="degree">{Math.round(props.celsius)}{" "} 
-              <span  className=" celsius-far cel">°C </span> 
+              <span className="celsius-far-cel">°C </span> 
               <span className="small">|</span>   
-             <span> <a hfref="/" className="celsius-far far" onClick={showFar}>°F </a></span>
+             <span className="celsius-far-far"> <a hfref="/" onClick={showFar} className="link" rel="noreferrer">°F</a></span>
               </div>
  </div>
 );
@@ -36,9 +36,9 @@ return (
 return (
  <div className="results col-6">
               <div className="degree">{Math.round(far())}{" "} 
-             <span> <a hfref="/" className=" celsius-far cel" onClick={showCel} >°C </a> </span>
+             <span className="celsius-far-cel"> <a hfref="/" onClick={showCel} className="link" rel="noreferrer">°C </a></span>
               <span className="small">|</span>   
-              <span  className="celsius-far far">°F </span>
+             <span  className="celsius-far-far far">°F</span>
               </div>
  </div>
 );} 
