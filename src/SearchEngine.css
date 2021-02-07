@@ -71,21 +71,17 @@ margin-left:-25px;
 cursor: pointer;
 }
 
-.celsius-far-cel a, .celsius-far-far a, .link a {
-color:#d9adad;
-cursor: none;
+.celsius-far-cel, .celsius-far-far {
+color: dimgray;
 }
 
-.celsius-far-cel a:link, .celsius-far-far a:link, .link a:link {
-color: #835858;
-text-decoration: line-through;
-}
-
-.celsius-far-cel a:hover, .celsius-far-far a:hover, .link a:hover{
+.link {
   color: #d9adad;
   cursor: pointer;
-  text-decoration: line-through;
+text-decoration: line-through;
+
 }
+
 
 .results {
 margin-top: 20px;

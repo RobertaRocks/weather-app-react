@@ -27,7 +27,7 @@ return (
               <div className="degree">{Math.round(props.celsius)}{" "} 
               <span className="celsius-far-cel">°C </span> 
               <span className="small">|</span>   
-             <span className="celsius-far-far link" onClick={showFar} >°F</a></span>
+             <span className="celsius-far-far link" onClick={showFar} >°F</span>
               </div>
  </div>
 );
