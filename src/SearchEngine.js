@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature";
+import Forecast from "./Forecast";
 import axios from "axios";
 
 
@@ -29,6 +30,7 @@ export default function SearchEngine() {
       descr: response.data.weather[0].main,
       wind: response.data.wind.speed,
       country: response.data.sys.country,
+      city: response.data.name,
       currentDate: 
                   new Date(response.data.dt * 1000).getHours() 
                   + ':' + 
@@ -68,7 +70,7 @@ export default function SearchEngine() {
           <li> Wind: {weather.wind} km/h</li>
         <li> {weather.currentDate} </li>   
         </ul>
-
+        <Forecast city={city} descr={weather.descr}/>
       </div>
     );
   } else {return form}

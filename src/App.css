@@ -4,7 +4,7 @@ font-family:monospace;
 color: dimgrey;
 max-width: 600px;
 margin: 30px auto;
-padding: 20px;
+padding: 10px;
 }
 
 .border{
@@ -13,6 +13,9 @@ border-radius: 5px;
 padding-bottom: 20px;
 box-shadow: 5px 10px #888888 ;
 margin-bottom:10px;
+padding-left: 10px;
+padding-right: 8px;
+
 }
 
 .small {
