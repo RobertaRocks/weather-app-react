@@ -1,5 +1,6 @@
 .form-inline {
-margin-bottom: 20px;
+margin-bottom: 25px;
+margin-top:25px;
 }
 
 
@@ -84,9 +85,14 @@ text-decoration: line-through;
 }
 
 
+.results-row {
+font-size: 14px;
+margin-top:20px;
+margin-bottom:20px;
+}
+
 .results {
-margin-top: 20px;
-font-size: 18px;
 text-align: left;
 list-style: none;
+
 }

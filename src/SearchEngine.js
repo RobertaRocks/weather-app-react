@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature";
 import Forecast from "./Forecast";
+import "./SearchEngine.css";
 import axios from "axios";
 
 
@@ -30,7 +31,8 @@ export default function SearchEngine() {
       wind: response.data.wind.speed,
       country: response.data.sys.country,
       city: response.data.name,
-      currentDate: new Date(response.data.dt * 1000), 
+      currentDate: new Date(response.data.dt * 1000),
+      icon: response.data.weather[0].icon,
 
   
   })
@@ -52,7 +54,7 @@ setLoaded (true);
       <div>
         {form}
         
-          <h2>{city}, {weather.country}</h2>
+          <h2>{city.toUpperCase()}, {weather.country}</h2>
           <h3>{weather.descr}</h3>
 
           <div className="row">
@@ -63,12 +65,12 @@ setLoaded (true);
          
            </div>
 
-        <ul className="results">
-          <li> Humidity: {weather.hum}% </li>
-          <li> Wind: {weather.wind} km/h</li>
-        <li> <FormattedDate currentDate={weather.currentDate}/> </li>   
+        <ul className="results-row">
+          <li className="results"> Humidity: {weather.hum}% </li>
+          <li className="results"> Wind: {weather.wind} km/h</li>
+        <li className="results"> <FormattedDate currentDate={weather.currentDate}/> </li>   
         </ul>
-        <Forecast city={city} descr={weather.descr}/>
+        <Forecast city={city} descr={weather.descr} icon={weather.icon}/>
       </div>
     );
   } else {return form}

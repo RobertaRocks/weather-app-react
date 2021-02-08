@@ -19,12 +19,12 @@ if (loaded) {
 return (
 
 <div className="forecast row"> 
-<ForecastPreview forecast={forecast.list[0]} descr={props.descr}/>
-<ForecastPreview forecast={forecast.list[1]} descr={props.descr}/>
-<ForecastPreview forecast={forecast.list[2]} descr={props.descr}/>
-<ForecastPreview forecast={forecast.list[3]} descr={props.descr}/>
-<ForecastPreview forecast={forecast.list[4]} descr={props.descr}/>
-<ForecastPreview forecast={forecast.list[5]} descr={props.descr}/>
+<ForecastPreview forecast={forecast.list[0]} descr={props.descr} icon={props.icon}/>
+<ForecastPreview forecast={forecast.list[1]} descr={props.descr} icon={props.icon}/>
+<ForecastPreview forecast={forecast.list[2]} descr={props.descr} icon={props.icon}/>
+<ForecastPreview forecast={forecast.list[3]} descr={props.descr} icon={props.icon}/>
+<ForecastPreview forecast={forecast.list[4]} descr={props.descr} icon={props.icon}/>
+<ForecastPreview forecast={forecast.list[5]} descr={props.descr} icon={props.icon}/>
 </div>)
 
 

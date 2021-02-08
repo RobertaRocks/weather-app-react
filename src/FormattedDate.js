@@ -26,7 +26,7 @@ let days = [
   }
   return (
     <div>
-      {day} {fulldate} {month} {hours}:{minutes}
+   Last updated on {day} {fulldate} {month} {hours}:{minutes}
     </div>
   );
 

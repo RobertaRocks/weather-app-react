@@ -16,10 +16,10 @@ return `${temperature}`;
 
 return (
 
-<div className="col-4">
+<div className="col-2">
 <span className="hour-for">{hours()}</span>
 <br></br>
-<img className="weather-icon col-2" src={`/img/${props.descr}.gif`} alt="img" />
+<img className="weather-icon col-2" src={`http://openweathermap.org/img/wn/${props.icon}@2x.png`} alt="img" />
 <br></br>
 <span className="forecast-cel"> <b>{temperature()}</b>°C</span>
 </div>
