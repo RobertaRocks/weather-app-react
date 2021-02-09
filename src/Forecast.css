@@ -1,19 +1,47 @@
 .forecast {
 text-align: center;
+margin-left:3px;
+margin-right:3px;
 }
 
-.weather-icon {
+img.weather-icon {
+margin-top: -15px;
+margin-left:65px;
+margin-bottom:0px;
+}
+
+.weather-icon-small{
+display: block;
 margin: 0 auto;
+max-width: 100px;
+
 }
 
-.col-4 {
+.for {
 padding-top: 5px;
 padding-bottom: 5px;
-margin-right:-8px;
-margin-left:-8px;
+margin-right:0px;
+margin-left: 0px;
+padding-right:-20px;
+padding-left: -20px;
 margin-bottom: 15px;
 }
 
+.hour-for {
+margin-bottom: -15px;
+margin-top:20px;
+}
+
+.weather-icon {
+margin-bottom: -20px;
+margin-top:-20px;
+}
+
+
+
 .forecast-cel {
 margin-bottom: 50px;
+margin-top:-10px;
 }
+
+
