@@ -1,7 +1,9 @@
 import React, {useState} from "react";
 import axios from "axios";
 import ForecastPreview from "./ForecastPreview";
+import ForecastPreviewDay from "./ForecastPreviewDay";
 import "./Forecast.css";
+import Loader from "react-loader-spinner";
 
 export default function Forecast(props) {
  const [loaded, setLoaded] = useState(false);
@@ -15,16 +17,25 @@ setLoaded(true);
 
 if (loaded) {
 
-
 return (
-
+<div>
+<span className="today-nextweek">🕓 Next Hours</span>
 <div className="forecast row"> 
-<ForecastPreview forecast={forecast.list[0]} descr={props.descr} icon={props.icon}/>
-<ForecastPreview forecast={forecast.list[1]} descr={props.descr} icon={props.icon}/>
-<ForecastPreview forecast={forecast.list[2]} descr={props.descr} icon={props.icon}/>
-<ForecastPreview forecast={forecast.list[3]} descr={props.descr} icon={props.icon}/>
-<ForecastPreview forecast={forecast.list[4]} descr={props.descr} icon={props.icon}/>
-<ForecastPreview forecast={forecast.list[5]} descr={props.descr} icon={props.icon}/>
+<ForecastPreview forecast={forecast.list[0]} descr={forecast.list[0].weather.main} icon={forecast.list[0].weather[0].icon}/>
+<ForecastPreview forecast={forecast.list[1]} descr={forecast.list[1].weather.main} icon={forecast.list[1].weather[0].icon}/>
+<ForecastPreview forecast={forecast.list[2]} descr={forecast.list[2].weather.main} icon={forecast.list[2].weather[0].icon}/>
+<ForecastPreview forecast={forecast.list[3]} descr={forecast.list[3].weather.main} icon={forecast.list[3].weather[0].icon}/>
+<ForecastPreview forecast={forecast.list[4]} descr={forecast.list[4].weather.main} icon={forecast.list[4].weather[0].icon}/>
+<ForecastPreview forecast={forecast.list[5]} descr={forecast.list[5].weather.main} icon={forecast.list[5].weather[0].icon}/>
+</div>
+<br></br>
+<span className="today-nextweek"> 🗓 Next Days</span>
+<div className="forecast row"> 
+<ForecastPreviewDay forecastDay={forecast.list[8]} descrDay={forecast.list[8].weather[0].main} iconDay={forecast.list[8].weather[0].icon}/>
+<ForecastPreviewDay forecastDay={forecast.list[16]} descrDay={forecast.list[16].weather[0].main} iconDay={forecast.list[16].weather[0].icon}/>
+<ForecastPreviewDay forecastDay={forecast.list[24]} descrDay={forecast.list[24].weather[0].main} iconDay={forecast.list[24].weather[0].icon}/>
+<ForecastPreviewDay forecastDay={forecast.list[32]} descrDay={forecast.list[32].weather[0].main} iconDay={forecast.list[32].weather[0].icon}/>
+</div>
 </div>)
 
 
@@ -34,6 +45,10 @@ return (
 let apiKey = "b1d85d3727e610039e9f3b93d686021e";
 let apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=metric`;
 axios.get(apiURL).then(getForecast);
-return "loading";
+return ( <Loader type="Hearts"
+        color="#d9adad"
+        height={100}
+        width={100}
+        timeout={6000} />);
 }
 }

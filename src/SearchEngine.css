@@ -57,10 +57,13 @@ font-size: 15px;
 top: -25px;
 position: relative;
 }
+.small {
+margin-left: -5px;}
 
 .celsius-far-far {
 margin-left:3px;
 cursor: pointer;
+
 }
 
 .far {
@@ -71,6 +74,7 @@ margin-left:3px;
 .celsius-far-cel{
 margin-left:-25px;
 cursor: pointer;
+margin-left:-35px;
 }
 
 .celsius-far-cel, .celsius-far-far {
@@ -89,10 +93,10 @@ text-decoration: line-through;
 font-size: 14px;
 margin-top:20px;
 margin-bottom:20px;
+margin-left:30px;
 }
 
 .results {
 text-align: left;
 list-style: none;
-
 }

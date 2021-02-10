@@ -68,9 +68,10 @@ setLoaded (true);
         <ul className="results-row">
           <li className="results"> Humidity: {weather.hum}% </li>
           <li className="results"> Wind: {weather.wind} km/h</li>
-        <li className="results"> <FormattedDate currentDate={weather.currentDate}/> </li>   
+          <li className="results"> <FormattedDate currentDate={weather.currentDate}/> </li>   
         </ul>
-        <Forecast city={city} descr={weather.descr} icon={weather.icon}/>
+                 <Forecast city={weather.city} />
+
       </div>
     );
   } else {return form}

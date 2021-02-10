@@ -1,47 +1,48 @@
-.forecast {
+
+
+img.weather-icon {
+margin-top: -10px;
+margin-left:35px;
+margin-bottom:0px;
+}
+.results {
+margin-left:-35px;
+}
+
+div.degree {
+display:block;
+margin:0 auto;}
+
+div.forecast.row {
 text-align: center;
 margin-left:3px;
 margin-right:3px;
+margin-top: 8px;
 }
 
-img.weather-icon {
-margin-top: -15px;
-margin-left:65px;
-margin-bottom:0px;
+span.hour-for {
+margin-bottom: 0px;
 }
 
-.weather-icon-small{
+img.weather-icon-small{
 display: block;
-margin: 0 auto;
-max-width: 100px;
+margin:0 auto;
+max-width: 110%;
+margin-top:-8px;
+margin-bottom:-8px;
 
 }
 
-.for {
-padding-top: 5px;
-padding-bottom: 5px;
-margin-right:0px;
-margin-left: 0px;
-padding-right:-20px;
-padding-left: -20px;
-margin-bottom: 15px;
+span.forecast-cel {
+text-align: center;
 }
 
-.hour-for {
-margin-bottom: -15px;
-margin-top:20px;
+span.today-nextweek {
+color: #ad6c80;
+margin-bottom:0px;
+padding-bottom:-30px;
 }
 
-.weather-icon {
-margin-bottom: -20px;
-margin-top:-20px;
+span.next-week-main {
+color: #ad6c80;
 }
-
-
-
-.forecast-cel {
-margin-bottom: 50px;
-margin-top:-10px;
-}
-
-
