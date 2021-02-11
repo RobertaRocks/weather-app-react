@@ -21,26 +21,64 @@ margin-top: 8px;
 }
 
 span.hour-for {
-margin-bottom: 0px;
+margin-bottom: -3px;
 }
 
 img.weather-icon-small{
 display: block;
 margin:0 auto;
 max-width: 110%;
-margin-top:-8px;
+margin-top:-12px;
 margin-bottom:-8px;
 
 }
 
 span.forecast-cel {
 text-align: center;
+font-size: 10px;
 }
 
-span.today-nextweek {
+button.today-nextweek {
 color: #ad6c80;
+border-radius: 10px;
 margin-bottom:0px;
 padding-bottom:-30px;
+border-color:#ad6c80;
+box-shadow: 3px 4px #888888;
+border-top-right-radius:30px;
+border-bottom-right-radius:30px;
+border-top-left-radius:30px;
+border-bottom-left-radius:30px;
+}
+
+button.today-nextweek:hover, button.today-nextweek:active, button.today-nextweek:active:focus, button.today-nextweek:visited, button.today-nextweek:focus {        
+outline: none; 
+box-shadow: 3px 4px #888888;
+color: #ad6c80;
+}
+
+.card {
+background-color: white;
+border: none;
+box-sizing: none;
+}
+.card-header {
+background-color: white;
+border: none;
+box-sizing: none;
+margin-bottom:0px;
+padding-bottom:0px;
+}
+
+.card-body {
+margin-top:0px;
+padding-top:10px;
+}
+
+
+button.rotate{
+-ms-transform: rotate(80deg);
+  transform: rotate(80deg);
 }
 
 span.next-week-main {

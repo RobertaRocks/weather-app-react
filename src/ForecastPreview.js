@@ -16,11 +16,13 @@ return `${temperature}`;
 
 return (
 
-<div className="col-2">
+<div className="col-3">
 <span className="hour-for">{hours()}</span>
-<img className="weather-icon-small" src={`http://openweathermap.org/img/wn/${props.icon}@2x.png`}  alt="img"  />
+<img className="weather-icon-small" src={`http://openweathermap.org/img/wn/${props.icon}.png`}  alt="img"  />
 <span className="forecast-cel"> <b>{temperature()}</b>°C</span>
 </div>
+
+
 
 );
 
