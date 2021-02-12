@@ -27,11 +27,6 @@ let temperature = Math.round(props.forecastDay.main.temp);
 return `${temperature}`;
 }
 
-function descr () {
-let descr = (props.descrDay);
-return `${descr}`;
-
-}
 
 return (
 
