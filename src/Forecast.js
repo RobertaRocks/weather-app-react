@@ -67,7 +67,7 @@ return (
                         <Card.Header className="card-header">
                             <Accordion.Toggle as={Button} variant="link" eventKey="0">
                             
-        <button className="btn today-nextweek">➭ Show Next Days</button>
+        <button className="btn today-nextweek" onClick={() => changeText("➭ Hide Next Days")}>{buttonText}</button>
                             </Accordion.Toggle>
                         </Card.Header>
             
