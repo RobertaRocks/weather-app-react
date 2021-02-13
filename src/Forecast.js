@@ -55,7 +55,7 @@ return (
                     <Card.Header className="card-header">
                         <Accordion.Toggle as={Button} variant="link" eventKey="0">
 
-        <button className="btn today-nextweek" onClick={() => changeTextHours("⬆︎ Hide Next Hours")}>{buttonTextHours}</button>
+        <div className="btn today-nextweek" onClick={() => changeTextHours("⬆︎ Hide Next Hours")}>{buttonTextHours}</div>
                         </Accordion.Toggle>
                     </Card.Header>
             
@@ -85,7 +85,7 @@ return (
                         <Card.Header className="card-header">
                             <Accordion.Toggle as={Button} variant="link" eventKey="0">
                             
-        <button className="btn today-nextweek" onClick={() => changeTextDays("⬆︎ Hide Next Days")}>{buttonTextDays}</button>
+       <div className="btn today-nextweek" onClick={() => changeTextDays("⬆︎ Hide Next Days")}>{buttonTextDays}</div>
                             </Accordion.Toggle>
                         </Card.Header>
             

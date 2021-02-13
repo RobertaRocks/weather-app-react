@@ -44,7 +44,7 @@ text-align: center;
 font-size: 10px;
 }
 
-button.today-nextweek {
+div.today-nextweek {
 color: #ad6c80;
 border-radius: 10px;
 margin-bottom:0px;
@@ -59,7 +59,7 @@ color: dimgrey;
 border-color:#888888;
 }
 
-button.today-nextweek:hover  {        
+div.today-nextweek:hover  {        
 outline: none; 
 background-color: #ebd4d4;
 box-shadow: 3px 4px #888888;
@@ -70,7 +70,7 @@ border-color:#888888;
 }
 
 
-button.today-nextweek:focus {        
+div.today-nextweek:focus {        
 outline: none; 
 background-color:#ebd4d4;
 box-shadow: 0px 0px #888888;
@@ -78,6 +78,17 @@ color: dimgrey;
 border-color:#888888;
 }
 
+.btn-link, .btn {
+color: transparent;
+box-shadow: 0px 0px #888888;
+
+}
+
+.btn-link:hover, .btn-link:focus, .btn, .btn:hover, .btn:focus {
+color:transparent;
+box-shadow: 0px 0px #888888;
+
+}
 
 .card {
 background-color: white;
