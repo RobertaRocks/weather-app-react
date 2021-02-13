@@ -9,6 +9,11 @@ margin-bottom:0px;
 margin-left:-35px;
 }
 
+.results-row {
+margin-bottom:5px;
+padding-bottom:3px;
+}
+
 div.degree {
 display:block;
 margin:0 auto;}
@@ -22,6 +27,7 @@ margin-top: 8px;
 
 span.hour-for {
 margin-bottom: -3px;
+font-size: 10px;
 }
 
 img.weather-icon-small{
@@ -49,18 +55,41 @@ border-top-right-radius:30px;
 border-bottom-right-radius:30px;
 border-top-left-radius:30px;
 border-bottom-left-radius:30px;
+color: dimgrey;
+border-color:#888888;
 }
 
-button.today-nextweek:hover, button.today-nextweek:active, button.today-nextweek:active:focus, button.today-nextweek:visited, button.today-nextweek:focus {        
+button.today-nextweek:hover  {        
 outline: none; 
+background-color: #ebd4d4;
 box-shadow: 3px 4px #888888;
-color: #ad6c80;
+color: dimgrey;
+color: dimgrey;
+border-color:#888888;
+
 }
+
+
+button.today-nextweek:focus {        
+outline: none; 
+background-color:#ebd4d4;
+box-shadow: 0px 0px #888888;
+color: dimgrey;
+border-color:#888888;
+}
+
 
 .card {
 background-color: white;
 border: none;
 box-sizing: none;
+padding-top:0px;
+margin-bottom:0px;
+padding-bottom:0px;
+margin-left:0px;
+margin-right:0px;
+padding-left:0px;
+padding-right:0px;
 }
 .card-header {
 background-color: white;
@@ -68,19 +97,32 @@ border: none;
 box-sizing: none;
 margin-bottom:0px;
 padding-bottom:0px;
-}
-
-.card-body {
 margin-top:0px;
-padding-top:10px;
+padding-top:0px;
 }
 
 
-button.rotate{
--ms-transform: rotate(80deg);
-  transform: rotate(80deg);
+div.card-body, .card-body {
+margin-top:0px;
+padding-top:0px;
+margin-bottom:0px;
+margin-left:0px;
+margin-right:0px;
+padding-left:0px;
+padding-right:0px;
+padding-bottom:0px;
+
 }
+
 
 span.next-week-main {
 color: #ad6c80;
+}
+
+div.col-3 {
+margin-left:0px;
+margin-right:0px;
+padding-left:0px;
+padding-right:0px;
+
 }

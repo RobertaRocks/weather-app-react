@@ -11,14 +11,27 @@ import Button from "react-bootstrap/Button";
 export default function Forecast(props) {
 
 
-const [buttonText, setButtonText] = useState("➭ Show Next Hours");
+const [buttonTextHours, setButtonTextHours] = useState("⬇︎ Show Next Hours");
+const [buttonTextDays, setButtonTextDays] = useState("⬇︎ Show Next Days");
 
-const changeText = () => {
-  if(buttonText.includes("Hide")) {
-    setButtonText("➭ Show Next Hours");
+
+const changeTextHours = () => {
+  if(buttonTextHours.includes("Hide")) {
+    setButtonTextHours("⬇︎ Show Next Hours");
   } else {
-    setButtonText("➭ Hide Next Hours");
+    setButtonTextHours("⬆︎ Hide Next Hours");
   }
+
+}
+
+const changeTextDays = () => {
+  
+ if(buttonTextDays.includes("Hide")) {
+    setButtonTextDays("⬇︎ Show Next Days");
+  } else {
+    setButtonTextDays("⬆︎ Hide Next Days");
+  }
+
 }
 const [loaded, setLoaded] = useState(false);
 const [forecast, setForecast] = useState(null);
@@ -42,7 +55,7 @@ return (
                     <Card.Header className="card-header">
                         <Accordion.Toggle as={Button} variant="link" eventKey="0">
 
-        <button className="btn today-nextweek" onClick={() => changeText("➭ Hide Next Hours")}>{buttonText}</button>
+        <button className="btn today-nextweek" onClick={() => changeTextHours("⬆︎ Hide Next Hours")}>{buttonTextHours}</button>
                         </Accordion.Toggle>
                     </Card.Header>
             
@@ -72,7 +85,7 @@ return (
                         <Card.Header className="card-header">
                             <Accordion.Toggle as={Button} variant="link" eventKey="0">
                             
-        <button className="btn today-nextweek" onClick={() => changeText("➭ Hide Next Days")}>{buttonText}</button>
+        <button className="btn today-nextweek" onClick={() => changeTextDays("⬆︎ Hide Next Days")}>{buttonTextDays}</button>
                             </Accordion.Toggle>
                         </Card.Header>
             
