@@ -64,7 +64,6 @@ outline: none;
 background-color: #ebd4d4;
 box-shadow: 3px 4px #888888;
 color: dimgrey;
-color: dimgrey;
 border-color:#888888;
 
 }
@@ -78,14 +77,12 @@ color: dimgrey;
 border-color:#888888;
 }
 
-.btn-link, .btn {
-color: transparent;
+.btn-link {
 box-shadow: 0px 0px #888888;
 
 }
 
-.btn-link:hover, .btn-link:focus, .btn, .btn:hover, .btn:focus {
-color:transparent;
+.btn-link:hover, .btn-link:focus {
 box-shadow: 0px 0px #888888;
 
 }
