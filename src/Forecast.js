@@ -13,8 +13,13 @@ export default function Forecast(props) {
 
 const [buttonText, setButtonText] = useState("➭ Show Next Hours");
 
-const changeText = (text) => setButtonText(text);
-
+const changeText = () => {
+  if(buttonText.includes("Hide")) {
+    setButtonText("➭ Show Next Hours");
+  } else {
+    setButtonText("➭ Hide Next Hours");
+  }
+}
 const [loaded, setLoaded] = useState(false);
 const [forecast, setForecast] = useState(null);
 
